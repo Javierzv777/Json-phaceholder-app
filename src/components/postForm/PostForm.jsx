@@ -4,18 +4,22 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
-import S from "./Poems.module.css";
+import S from "./PostForm.module.css";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { useSelector, useDispatch } from 'react-redux';
+import { newPoem } from '../../redux/actions'
 
-export default function Story() {
+export default function NewPost() {
+  const poems = useSelector(state=> state.poems);
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => dispatch(newPoem(data));
   return (
     <React.Fragment>
       <CssBaseline />
@@ -29,12 +33,8 @@ export default function Story() {
             }}
           >
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1>New Poem</h1>
-              <InputLabel>Author:</InputLabel>
-              <TextField fullWidth label="Author" id="fullWidth" 
-               {...register("author", { required: true })}/>
-              <br />
-              <br />
+              <h1>New Post</h1>
+          
               <InputLabel>Title:</InputLabel>
               <TextField fullWidth label="title" id="fullWidth" 
                {...register("title", { required: true })}/>

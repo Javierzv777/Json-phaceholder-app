@@ -7,15 +7,17 @@ import InputLabel from "@mui/material/InputLabel";
 import S from "./Poems.module.css";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { useDispatch } from 'react-redux';
 
 export default function Story() {
-  const {
+  const dispatch = useDispatch()
+    const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => dispatch(newPoem(data));
   return (
     <React.Fragment>
       <CssBaseline />

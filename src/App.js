@@ -1,9 +1,11 @@
 import './App.css';
 import ButtonAppBar from './components/navbar/Navbar';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import DataGridDemo from './components/datatable/Datatable.tsx';
+import DataGridDemo from './components/datatable/Datatable.jsx';
 import Navbar from './components/navbar/Navbar.jsx';
-import Story from './components/story/Poem';
+import NewPost from './components/postForm/PostForm.jsx';
+import Comments from './components/comments/Comments.tsx';
+import Post from './components/post/Post';
 
 
 function App() {
@@ -13,8 +15,10 @@ function App() {
         <Navbar/>
       
           <Routes>
-              <Route path="/story" element={<Story/>}/>
+              <Route path="/newpost" element={<NewPost/>}/>
+              <Route path="/post" element={<Post/>}/>
               <Route path="/" element={<DataGridDemo/>}/>
+              <Route path="/comments" element={<Comments/>}/>
           </Routes>
        
       </div>

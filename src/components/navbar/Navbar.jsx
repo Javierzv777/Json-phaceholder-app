@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   AppBar,
   Toolbar,
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 function Navbar() {
   const classes = useStyles();
 
+
   return (
     <AppBar position="static">
       <CssBaseline />
@@ -46,7 +48,7 @@ function Navbar() {
             <Link to="/about" className={classes.link}>
               About
             </Link>
-            <Link to="/story" className={classes.link}>
+            <Link to="/newpost" className={classes.link}>
               New Story
             </Link>
             <Link to="/faq" className={classes.link}>

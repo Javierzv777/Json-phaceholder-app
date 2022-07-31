@@ -21,9 +21,9 @@ function refreshMessages(): MessageExample[] {
   );
 }
 
-export default function FixedBottomNavigation() {
+export default function Comments() {
   const [value, setValue] = React.useState(0);
-  const ref = React.useRef<HTMLDivElement>(null);
+  const ref = React.useRef(null);
   const [messages, setMessages] = React.useState(() => refreshMessages());
 
   React.useEffect(() => {
