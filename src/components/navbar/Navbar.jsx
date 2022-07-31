@@ -46,11 +46,11 @@ function Navbar() {
             <Link to="/about" className={classes.link}>
               About
             </Link>
-            <Link to="/contact" className={classes.link}>
-              Contact
+            <Link to="/story" className={classes.link}>
+              New Story
             </Link>
             <Link to="/faq" className={classes.link}>
-              FAQ
+              Login
             </Link>
           </div>
       </Toolbar>

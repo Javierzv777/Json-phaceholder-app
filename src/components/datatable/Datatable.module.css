@@ -1,3 +1,11 @@
 .logo{
     width:1.5rem;
 }
+.container{
+    height: 700px;
+    min-height: min-content;
+     width: 77%;
+     margin: auto;
+     padding-top: 10vh;
+     background-color: #f0f1ff;
+}
