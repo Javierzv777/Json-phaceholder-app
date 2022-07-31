@@ -4,6 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { useSelector } from "react-redux";
+import { Button } from "@mui/material";
 import {
   createTheme,
   responsiveFontSizes,
@@ -11,11 +12,13 @@ import {
 } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Comments from "../comments/Comments.tsx";
+import { useNavigate } from "react-router-dom";
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 export default function Post() {
+    const navigate = useNavigate()
   const post = useSelector((state) => state.post);
   const comments = useSelector((state) => state.comments);
   const theme = createTheme({
@@ -40,7 +43,19 @@ export default function Post() {
             <div className={S.typography}>
                 <Comments comments={comments} />
             </div>
+            <br />
+            <Button
+                  className={S.button}
+                 
+                  onClick={()=>navigate("/")}
+                >
+                  RETURN
+                </Button>
+                <br />
+                <br />
+                <br />
           </ThemeProvider>
+         
         </Box>
       </Container>
     </React.Fragment>

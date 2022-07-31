@@ -8,10 +8,14 @@ import S from "./PostForm.module.css";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from 'react-redux';
-import { newPoem } from '../../redux/actions'
+import { newPost } from '../../redux/actions'
+import { useNavigate } from "react-router-dom";
+import Stack from '@mui/material/Stack';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 export default function NewPost() {
-  const poems = useSelector(state=> state.poems);
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const {
     register,
@@ -19,7 +23,9 @@ export default function NewPost() {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => dispatch(newPoem(data));
+  const onSubmit = (data) =>{
+    navigate("/");
+    dispatch(newPost(data))};
   return (
     <React.Fragment>
       <CssBaseline />
@@ -52,16 +58,29 @@ export default function NewPost() {
               />
               <br />
               <br />
+              <InputLabel id="demo-simple-select-label">UserId</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                {...register("userId", { required: true })}
+                label="Age"
+              >{new Array(10).map((e, index) =>  <MenuItem value={index}>{index}</MenuItem>)}
+              </Select>
               <br />
               <br />
               
+              <Stack spacing={4} direction="row" justifyContent="center">
+                <Button variant="text"
+                  onClick={()=>navigate("/")}
+                >CANCEL</Button>
                 <Button
                   className={S.button}
                   variant="contained"
                   type="submit"
                 >
-                  SUBMIT
+                  UPDATE
                 </Button>
+              </Stack>
             </form>
           </Box>
         </Box>

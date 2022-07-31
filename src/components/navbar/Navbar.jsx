@@ -39,7 +39,7 @@ function Navbar() {
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4" className={classes.logo}>
-          Navbar
+          Json queries
         </Typography>
           <div className={classes.navlinks}>
             <Link to="/" className={classes.link}>
@@ -49,10 +49,10 @@ function Navbar() {
               About
             </Link>
             <Link to="/newpost" className={classes.link}>
-              New Story
+              New Post
             </Link>
             <Link to="/faq" className={classes.link}>
-              Login
+              
             </Link>
           </div>
       </Toolbar>

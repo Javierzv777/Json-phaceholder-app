@@ -3,6 +3,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
+import Stack from '@mui/material/Stack';
 import InputLabel from "@mui/material/InputLabel";
 import S from "./Edit.module.css";
 import { Button } from "@mui/material";
@@ -32,7 +33,7 @@ export default function Edit() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Box sx={{ bgcolor: "#f0f1ff", height: "123vh" }}>
+        <Box sx={{ bgcolor: "#f0f1ff", height: "121vh" }}>
           <Box
             sx={{
               maxWidth: "95%",
@@ -63,7 +64,10 @@ export default function Edit() {
               <br />
               <br />
               <br />
-              
+              <Stack spacing={4} direction="row" justifyContent="center">
+                <Button variant="text"
+                  onClick={()=>navigate("/")}
+                >CANCEL</Button>
                 <Button
                   className={S.button}
                   variant="contained"
@@ -71,6 +75,8 @@ export default function Edit() {
                 >
                   UPDATE
                 </Button>
+              </Stack>
+
             </form>
           </Box>
         </Box>

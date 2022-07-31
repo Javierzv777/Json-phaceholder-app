@@ -1,5 +1,5 @@
 import { GET_POSTS, GET_POST, GET_COMMENTS, UPDATE_POST, 
-    DELETE_POST } from "./actions";
+ NEW_POST,   DELETE_POST } from "./actions";
 
 const initialState = {
     posts: [],
@@ -41,6 +41,11 @@ export const reducer = (state = initialState, {type, payload}) => {
                 ...state,
                 posts: [...state.posts.filter(post => post.id !== payload)]
             }
+        case NEW_POST:
+                return {
+                    ...state,
+                    posts: [...state.posts, payload]
+                }
         default: return state;
     }
 }

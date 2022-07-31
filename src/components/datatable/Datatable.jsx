@@ -60,7 +60,7 @@ export default function DataGridDemo() {
         return <img className={S.logo} onClick={onClick} src={bookIcon}/>;
       },
     },
-    { field: 'id', headerName: 'postID', width: 70 },
+    { field: 'id', headerName: 'postId', width: 70 },
     { field: 'title', headerName: 'Title', width: 130 },
     { field: 'body', headerName: 'Body', width: 300 },
     {
