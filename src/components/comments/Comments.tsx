@@ -21,7 +21,7 @@ function refreshMessages(): MessageExample[] {
   );
 }
 
-export default function Comments() {
+export default function Comments( {comments} ) {
   const [value, setValue] = React.useState(0);
   const ref = React.useRef(null);
   const [messages, setMessages] = React.useState(() => refreshMessages());
@@ -32,15 +32,15 @@ export default function Comments() {
   }, [value, setMessages]);
 
   return (
-    <Box sx={{ pb: 7 }} ref={ref}>
+    <Box sx={{ pb: 7, backgroundColor: "#dde7e7"}} ref={ref}>
       <CssBaseline />
       <List>
-        {messages.map(({ primary, secondary, person }, index) => (
-          <ListItem button key={index + person}>
+        {comments.map(({ name, body, email }, index) => (
+          <ListItem button key={index }>
             <ListItemAvatar>
-              <Avatar alt="Profile Picture" src={person} />
+              <Avatar alt="Profile Picture" src={email} />
             </ListItemAvatar>
-            <ListItemText primary={primary} secondary={secondary} />
+            <ListItemText primary={name} secondary={body} />
           </ListItem>
         ))}
       </List>
@@ -52,9 +52,9 @@ export default function Comments() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+          {/* <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
           <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} /> */}
         </BottomNavigation>
       </Paper>
     </Box>

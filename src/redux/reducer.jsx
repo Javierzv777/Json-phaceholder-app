@@ -1,19 +1,11 @@
-import { GET_POSTS } from "./actions";
+import { GET_POSTS, GET_POST, GET_COMMENTS, UPDATE_POST, 
+    DELETE_POST } from "./actions";
 
 const initialState = {
-    posts: [
-        { id: 1, userId: 'Snow', title: 'Jon', body:'fdfd', comments: 0 },
-        { id: 2, userId: 'Lannister', title: 'Cersei', body:'fdf', comments: 42 },
-        { id: 3, userId: 'Lannister', title: 'Jaime',  body:'fdfd', comments: 45 },
-        { id: 4, userId: 'Stark', title: 'Arya', body:'fdf', comments: 16 },
-        { id: 5, userId: 'Targaryen', title: 'Daenerys', body:'fdfd', comments: null },
-        { id: 6, userId: 'Melisandre', title: null, body:'fdfd', comments: 150 },
-        { id: 7, userId: 'Clifford', title: 'Ferrara', body:'dfd', comments: 44 },
-        { id: 8, userId: 'Frances', title: 'Rossini', body:'dfd', comments: 36 },
-        { id: 9, userId: 'Roxie', title: 'Harvey', body:'dfdf', comments: 65 },
-      ],
+    posts: [],
     users : [],
-    comments : []
+    comments : [],
+    post:{}
 }
 
 export const reducer = (state = initialState, {type, payload}) => {
@@ -22,6 +14,32 @@ export const reducer = (state = initialState, {type, payload}) => {
             return {
                 ...state, 
                 posts:[...payload]
+            }
+        case GET_COMMENTS:
+            return {
+                ...state, 
+                comments: payload
+            }
+        case GET_POST:
+            return {
+                ...state, 
+                post: state.posts.find(element => element.id === payload)
+            }
+        case UPDATE_POST:
+            state.posts.forEach(post => {
+                if( post.id === payload.id) {
+                    post.title = payload.title;
+                    post.body = payload.body
+                }
+            })
+            return {
+                ...state,
+                posts: state.posts 
+            }
+        case DELETE_POST:
+            return {
+                ...state,
+                posts: [...state.posts.filter(post => post.id !== payload)]
             }
         default: return state;
     }

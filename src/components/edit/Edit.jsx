@@ -4,20 +4,30 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
-import S from "./Poems.module.css";
+import S from "./Edit.module.css";
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { editPost } from "../../redux/actions";
+import { useNavigate } from "react-router-dom";
 
-export default function Story() {
-  const dispatch = useDispatch()
-    const {
+export default function Edit() {
+  
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const post = useSelector(state => state.post);
+  const onSubmit = (data) =>{
+    navigate("/")
+    dispatch(editPost({...data, id: post.id, userId: post.userId}))};
+   
+  const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => dispatch(newPoem(data));
+  
+  
   return (
     <React.Fragment>
       <CssBaseline />
@@ -31,20 +41,17 @@ export default function Story() {
             }}
           >
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1>New Poem</h1>
-              <InputLabel>Author:</InputLabel>
-              <TextField fullWidth label="Author" id="fullWidth" 
-               {...register("author", { required: true })}/>
-              <br />
-              <br />
+              <h1>Edit Post</h1>
+             
               <InputLabel>Title:</InputLabel>
-              <TextField fullWidth label="title" id="fullWidth" 
+              <TextField defaultValue={post?.title} fullWidth label="title" id="fullWidth" 
                {...register("title", { required: true })}/>
               <br />
               <br />
               <br />
               <InputLabel>Body:</InputLabel>
               <TextField
+                defaultValue={post?.body}
                 fullWidth
                 id="outlined-multiline-static"
                 label="story"
@@ -62,7 +69,7 @@ export default function Story() {
                   variant="contained"
                   type="submit"
                 >
-                  SUBMIT
+                  UPDATE
                 </Button>
             </form>
           </Box>

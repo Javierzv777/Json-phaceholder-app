@@ -1,5 +1,9 @@
 import axios from 'axios';
 export const GET_POSTS = "GET_POSTS";
+export const GET_COMMENTS = "GET_COMMENTS";
+export const GET_POST = "GET_POST"; 
+export const UPDATE_POST = "UPDATE_POST";
+export const DELETE_POST = "DELETE_POST";
 
 export const newPoem = (data) => {
     return async (dispatch) => {
@@ -13,9 +17,6 @@ export const getPosts = () => {
     return async (dispatch) => {
         axios(`/posts`)
         .then( response => dispatch({type: GET_POSTS, payload: response.data }))
-        // .then (()=>fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
-        // .then((response) => response.json())
-        // .then((json) => console.log(json)))
 
     }
 }
@@ -24,7 +25,25 @@ export const getPost = (id) => {
     return async (dispatch) => {
         axios(`/posts/${id}/comments`)
         // .then( response => dispatch({type: GET_POSTS, payload: response.data }))
-        .then( response => console.log( response ) )
+        .then( response =>{
+            dispatch({type: GET_POST, payload: id})
+            dispatch({type: GET_COMMENTS, payload: response.data}) })
     }
 }
 
+export const editPost = (data) => {
+    return async (dispatch) => {
+        axios.put(`/posts/${data.id}`, data)
+        // .then( response => dispatch({type: GET_POSTS, payload: response.data }))
+        .then( response =>{ console.log(response)
+            dispatch({type: UPDATE_POST, payload: response.data})})
+    }
+}
+
+export const deletePost = (id) => {
+    return async (dispatch) => {
+        axios.delete(`/posts/${id}`)
+        .then( response =>{ console.log(id)
+            dispatch({type: DELETE_POST, payload: id})})
+    }
+}
