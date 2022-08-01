@@ -7,6 +7,7 @@ import NewPost from './components/postForm/PostForm.jsx';
 import Comments from './components/comments/Comments.tsx';
 import Post from './components/post/Post';
 import Edit from './components/edit/Edit';
+import About from './components/About/Abount';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Navbar/>
       
           <Routes>
+            <Route path="/about" element={<About/>}/>
               <Route path="/newpost" element={<NewPost/>}/>
               <Route path="/post" element={<Post/>}/>
               <Route path="/editpost" element={<Edit/>}/>
