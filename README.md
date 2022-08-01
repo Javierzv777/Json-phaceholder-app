@@ -3,7 +3,9 @@
 Esta aplicación consume la api https://jsonplaceholder.typicode.com/ trayendo todas las publicaciones en la pagína principal, también muestra los comentarios de cada post dando click en el ícono de la segunda columna, donde está el libro en cada fila que se desea consultar.
 En la penúltima columna de cada fila se puede apreciar un ícono de un lapiz, dando click sobre el navegador nos dirige a una ventana donde se puede editar una publicación.
 y en la última columba de cada fila hay un basurero que nos servirá para eliminar una publicación.
-Si queremos crear una nueva publicación, en  barra de navegación tenemos un componente llamado 'new post" que nos dirigirá a una ventana donde podemos crear una nueva publicación
+Si queremos crear una nueva publicación, en  barra de navegación tenemos un componente llamado 'new post" que nos dirigirá a una ventana donde podemos crear una nueva publicación.
+
+también por medio de la datatable de material ui podemos filtrar las publicaciones y ordenarlas.
 
 Esta aplicación fué hecha usando React, Material ui, react-redux, module css, axios y Reacto-Router-Dom
 
@@ -25,6 +27,7 @@ This application consumes the api https://jsonplaceholder.typicode.com/ bringing
 In the penultimate column of each row you can see a pencil icon, clicking on the browser takes us to a window where you can edit a publication.
 and in the last column of each row there is a garbage can that will help us to delete a publication.
 If we want to create a new post, in the navigation bar we have a component called 'new post' that will direct us to a window where we can create a new post
+also by means of the ui material data table we can filter the posts and sort them.
 
 This app was made using React, Material ui, react-redux, module css, axios and Reacto-Router-Dom
 
