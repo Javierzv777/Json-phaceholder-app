@@ -136,10 +136,10 @@ export default function DataGridDemo() {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            there will be a new post
+            This post will be deleted
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            A new post will be added at the end of the list
+            the data of this post will be deleted permanently
           </Typography>
         </Box>
       </Modal>
