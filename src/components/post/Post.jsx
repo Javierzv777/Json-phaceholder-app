@@ -34,10 +34,11 @@ export default function Post() {
         <Box sx={{ bgcolor: "#f0f1ff", height: "max-content" }}>
           <ThemeProvider theme={theme}>
               <br />
-            <Typography className={S.typographyText} variant="h4">{post?.title}</Typography>
-           
-            <Typography className={S.typographyText} variant="h8">{post?.body}</Typography>
-            <br />
+              <div className={S.typographyText}>
+                <Typography className={S.typographyText} variant="h4">{post?.title}</Typography>
+                <Typography className={S.typographyText} variant="h8">{post?.body}</Typography>
+              </div>
+            
            
             <Typography className={S.typographyText} variant="h4">Comments</Typography>
             <div className={S.typography}>

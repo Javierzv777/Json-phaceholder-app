@@ -143,7 +143,9 @@ export default function DataGridDemo() {
           </Typography>
         </Box>
       </Modal>
-      <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection />
+      <div className={S.dataTable}>
+        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection />
+      </div>
      
     </div>
   );

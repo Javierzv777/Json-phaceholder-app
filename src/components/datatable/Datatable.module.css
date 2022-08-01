@@ -1,9 +1,13 @@
+.dataTable{
+    margin-left: 2rem;
+    height: 700px;
+    min-height: min-content;
+}
 .logo{
     width:1.5rem;
 }
 .container{
-    height: 700px;
-    min-height: min-content;
+
      width: 77%;
      margin: auto;
      padding-top: 10vh;
