@@ -35,12 +35,12 @@ export default function Post() {
           <ThemeProvider theme={theme}>
               <br />
               <div className={S.typographyText}>
-                <Typography className={S.typographyText} variant="h4">{post?.title}</Typography>
-                <Typography className={S.typographyText} variant="h8">{post?.body}</Typography>
+                <Typography className={S.typographyText} variant="h6">{post?.title}</Typography>
+                <Typography className={S.typographyText} variant="h9">{post?.body}</Typography>
               </div>
             
            
-            <Typography className={S.typographyText} variant="h4">Comments</Typography>
+            <Typography className={S.typographyText} variant="h6">Comments</Typography>
             <div className={S.typography}>
                 <Comments comments={comments} />
             </div>
