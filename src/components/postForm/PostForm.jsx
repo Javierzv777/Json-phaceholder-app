@@ -18,9 +18,9 @@ import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 
 export default function NewPost() {
-  const [data, setData] = React.useState(null)
+  const [data, setData] = React.useState(null);
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+
   const handleClose = () =>{
     navigate("/");
     dispatch(newPost(data));
@@ -35,7 +35,7 @@ export default function NewPost() {
   } = useForm();
   const onSubmit = (data) =>{
     setData(data);
-    handleOpen()}
+    setOpen(true);}
 
   return (
     <React.Fragment>

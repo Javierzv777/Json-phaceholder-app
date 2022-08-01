@@ -18,7 +18,7 @@ import style from '../styleModal'
 export default function Edit() {
   const [data, setdata] = React.useState(null)
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  
   const handleClose = () =>{
     navigate("/");
     dispatch(editPost({...data, id: post.id, userId: post.userId}));
@@ -29,7 +29,7 @@ export default function Edit() {
   const post = useSelector(state => state.post);
   const onSubmit = (data) =>{
     setdata(data);
-    handleOpen()};
+    setOpen(true);};
    
   const {
     register,
