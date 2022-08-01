@@ -1,4 +1,4 @@
-##JSON placeholder app
+<h2>JSON placeholder app<h2>
 
 Esta aplicación consume la api https://jsonplaceholder.typicode.com/ trayendo todas las publicaciones en la pagína principal, también muestra los comentarios de cada post dando click en el ícono de la segunda columna, donde está el libro en cada fila que se desea consultar.
 En la penúltima columna de cada fila se puede apreciar un ícono de un lapiz, dando click sobre el navegador nos dirige a una ventana donde se puede editar una publicación.
@@ -19,9 +19,9 @@ La página se volverá a cargar si realiza modificaciones.
 También verá cualquier error en la consola.
 
 
-<img src="https://i.ibb.co/0YSCG3C/Captura-desde-2022-07-31-20-23-21.png" alt"imagen de la aplicación" />
+<img src="https://i.ibb.co/0YSCG3C/Captura-desde-2022-07-31-20-23-21.png" alt"imagen-aplicación" />
 
-##JSON placeholder app
+<h2>JSON placeholder app</h2>
 
 This application consumes the api https://jsonplaceholder.typicode.com/ bringing all the publications to the main page, it also shows the comments of each post by clicking on the icon of the second column, where the book is in each row that is displayed. you want to consult.
 In the penultimate column of each row you can see a pencil icon, clicking on the browser takes us to a window where you can edit a publication.
@@ -41,4 +41,4 @@ The page will reload if you make changes.
 You will also see any errors in the console.
 
 
-<img src="https://i.ibb.co/0YSCG3C/Capture-from-2022-07-31-20-23-21.png" alt"application image" />
+<img src="https://i.ibb.co/0YSCG3C/Capture-from-2022-07-31-20-23-21.png" alt"application-image" />
