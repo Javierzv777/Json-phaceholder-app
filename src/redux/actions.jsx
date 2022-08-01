@@ -8,8 +8,8 @@ export const DELETE_POST = "DELETE_POST";
 
 export const newPost = (data) => {
     return async (dispatch) => {
-        axios.post(`/posts`, {...data, id:1})
-          .then(res => dispatch({type: NEW_POST, payload: NEW_POST}))
+        axios.post(`/posts`, {...data})
+          .then(res => dispatch({type: NEW_POST, payload: res.data}))
 
     }
 }

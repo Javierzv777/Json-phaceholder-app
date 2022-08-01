@@ -13,8 +13,18 @@ import { useNavigate } from "react-router-dom";
 import Stack from '@mui/material/Stack';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import style from '../styleModal'
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
 
 export default function NewPost() {
+  const [data, setData] = React.useState(null)
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () =>{
+    navigate("/");
+    dispatch(newPost(data));
+    setOpen(false)};
   const navigate = useNavigate()
   const dispatch = useDispatch();
   const {
@@ -24,12 +34,28 @@ export default function NewPost() {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) =>{
-    navigate("/");
-    dispatch(newPost(data))};
+    setData(data);
+    handleOpen()}
+
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            there will be a new post
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            A new post will be added at the end of the list
+          </Typography>
+        </Box>
+      </Modal>
         <Box sx={{ bgcolor: "#f0f1ff", height: "123vh" }}>
           <Box
             sx={{
@@ -60,11 +86,12 @@ export default function NewPost() {
               <br />
               <InputLabel id="demo-simple-select-label">UserId</InputLabel>
               <Select
+                fullWidth
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 {...register("userId", { required: true })}
                 label="Age"
-              >{new Array(10).map((e, index) =>  <MenuItem value={index}>{index}</MenuItem>)}
+              >{new Array(10).fill(1).map((e, index) =>  <MenuItem value={index+1}>{index+1}</MenuItem>)}
               </Select>
               <br />
               <br />

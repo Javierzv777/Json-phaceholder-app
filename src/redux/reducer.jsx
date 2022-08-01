@@ -44,7 +44,7 @@ export const reducer = (state = initialState, {type, payload}) => {
         case NEW_POST:
                 return {
                     ...state,
-                    posts: [...state.posts, payload]
+                    posts: [...state.posts, {...payload, id: state.posts.length+1}]
                 }
         default: return state;
     }

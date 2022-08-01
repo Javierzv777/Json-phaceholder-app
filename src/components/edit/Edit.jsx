@@ -11,15 +11,25 @@ import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from 'react-redux';
 import { editPost } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
+import Modal from '@mui/material/Modal';
+import Typography from '@mui/material/Typography';
+import style from '../styleModal'
 
 export default function Edit() {
-  
+  const [data, setdata] = React.useState(null)
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () =>{
+    navigate("/");
+    dispatch(editPost({...data, id: post.id, userId: post.userId}));
+    setOpen(false)};
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const post = useSelector(state => state.post);
   const onSubmit = (data) =>{
-    navigate("/")
-    dispatch(editPost({...data, id: post.id, userId: post.userId}))};
+    setdata(data);
+    handleOpen()};
    
   const {
     register,
@@ -33,6 +43,21 @@ export default function Edit() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            there will be an update of this post
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            The new information will overwrite the previous data
+          </Typography>
+        </Box>
+      </Modal>
         <Box sx={{ bgcolor: "#f0f1ff", height: "121vh" }}>
           <Box
             sx={{
