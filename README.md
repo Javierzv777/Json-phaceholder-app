@@ -1,7 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Esta aplicación consume la api https://jsonplaceholder.typicode.com/ trayendo todas las publicaciones en la pagína principal, también muestra los comentarios de cada post dando click en el ícono de la segunda columna, donde está el libro en cada fila que se desea consultar.
+En la penúltima columna de cada fila se puede apreciar un ícono de un lapiz, dando click sobre el navegador nos dirige a una ventana donde se puede editar una publicación.
+y en la última columba de cada fila hay un basurero que nos servirá para eliminar una publicación.
+Si queremos crear una nueva publicación, en  barra de navegación tenemos un componente llamado 'new post" que nos dirigirá a una ventana donde podemos crear una nueva publicación
 
 ## Table of Contents
 
