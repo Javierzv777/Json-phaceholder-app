@@ -34,7 +34,7 @@ export default function About() {
         <Box sx={{ bgcolor: "#f0f1ff", height: "max-content" }}>
           <ThemeProvider theme={theme}>
               <br />
-            <Typography className={S.typographyText} variant="h4">
+            <Typography className={S.typographyText} variant="h5">
             JSON placeholder app
             </Typography>
            
