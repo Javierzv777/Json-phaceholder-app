@@ -141,6 +141,8 @@ export default function DataGridDemo() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             the data of this post will be deleted permanently
           </Typography>
+          <br />
+          <br />
           <Button
                   className={S.button}
                   variant="contained"

@@ -54,6 +54,8 @@ export default function NewPost() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             A new post will be added at the end of the list
           </Typography>
+          <br />
+          <br />
           <Button
                   className={S.button}
                   variant="contained"

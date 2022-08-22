@@ -56,6 +56,8 @@ export default function Edit() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             The new information will overwrite the previous data
           </Typography>
+          <br />
+          <br />
           <Button
                   className={S.button}
                   variant="contained"
