@@ -18,8 +18,17 @@ Abra http://localhost:3000 para verlo en el navegador.
 La página se volverá a cargar si realiza modificaciones.
 También verá cualquier error en la consola.
 
-
+marco de la tabla
 <img src="https://i.ibb.co/0YSCG3C/Captura-desde-2022-07-31-20-23-21.png" alt="aplicación" />
+acerca de la app
+<img src="https://i.ibb.co/NYqLm8d/Sin-t-tulo3.png" alt= "about"/>
+editar
+<img src="https://i.ibb.co/p234zGq/Sin-t-tulo2.png" alt="edit" />
+lista de comentarios
+<img src="https://i.ibb.co/ncTkC97/Sin-t-tulo.png" alt="comments" />
+modal 
+<img src="https://i.ibb.co/sK7fxJt/Sin-t-tulo4.png" alt="modal" />
+
 
 <h2>JSON placeholder app</h2>
 
@@ -41,4 +50,13 @@ The page will reload if you make changes.
 You will also see any errors in the console.
 
 
-<img src="https://i.ibb.co/0YSCG3C/Capture-from-2022-07-31-20-23-21.png" alt="application" />
+table frame
+<img src="https://i.ibb.co/0YSCG3C/Captura-desde-2022-07-31-20-23-21.png" alt="aplicación" />
+about frame
+<img src="https://i.ibb.co/NYqLm8d/Sin-t-tulo3.png" alt= "about"/>
+edit frame
+<img src="https://i.ibb.co/p234zGq/Sin-t-tulo2.png" alt="edit" />
+comments frame
+<img src="https://i.ibb.co/ncTkC97/Sin-t-tulo.png" alt="comments" />
+modal frame
+<img src="https://i.ibb.co/sK7fxJt/Sin-t-tulo4.png" alt="modal" />
