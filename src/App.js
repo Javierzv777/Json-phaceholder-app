@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import DataGridDemo from './components/datatable/Datatable.jsx';
 import Navbar from './components/navbar/Navbar.jsx';
 import NewPost from './components/postForm/PostForm.jsx';
-import Comments from './components/comments/Comments.tsx';
+import Comments from './components/comments/Comments.jsx';
 import Post from './components/post/Post';
 import Edit from './components/edit/Edit';
 import About from './components/About/Abount';

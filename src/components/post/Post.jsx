@@ -11,7 +11,7 @@ import {
   ThemeProvider,
 } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import Comments from "../comments/Comments.tsx";
+import Comments from "../comments/Comments.jsx";
 import { useNavigate } from "react-router-dom";
 
 let theme = createTheme();

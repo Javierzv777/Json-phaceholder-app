@@ -13,8 +13,8 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 
-function refreshMessages(): MessageExample[] {
-  const getRandomInt = (max: number) => Math.floor(Math.random() * Math.floor(max));
+function refreshMessages() {
+  const getRandomInt = ( number) => Math.floor(Math.random() * Math.floor(max));
 
   return Array.from(new Array(50)).map(
     () => messageExamples[getRandomInt(messageExamples.length)],
@@ -27,7 +27,7 @@ export default function Comments( {comments} ) {
   const [messages, setMessages] = React.useState(() => refreshMessages());
 
   React.useEffect(() => {
-    (ref.current as HTMLDivElement).ownerDocument.body.scrollTop = 0;
+    (ref.current ).ownerDocument.body.scrollTop = 0;
     setMessages(refreshMessages());
   }, [value, setMessages]);
 
@@ -61,13 +61,9 @@ export default function Comments( {comments} ) {
   );
 }
 
-interface MessageExample {
-  primary: string;
-  secondary: string;
-  person: string;
-}
 
-const messageExamples: readonly MessageExample[] = [
+
+const messageExamples = [
   {
     primary: 'Brunch this week?',
     secondary: "I'll be in the neighbourhood this week. Let's grab a bite to eat",
