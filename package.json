@@ -6,7 +6,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "main": "index.jsx",
+  "main": "index.js",
   "devDependencies": {
     "react-scripts": "latest"
   },
