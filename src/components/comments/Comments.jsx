@@ -14,7 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 
 function refreshMessages() {
-  const getRandomInt = ( number) => Math.floor(Math.random() * Math.floor(max));
+  const getRandomInt = ( max) => Math.floor(Math.random() * Math.floor(max));
 
   return Array.from(new Array(50)).map(
     () => messageExamples[getRandomInt(messageExamples.length)],
