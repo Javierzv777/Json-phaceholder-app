@@ -54,6 +54,13 @@ export default function NewPost() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             A new post will be added at the end of the list
           </Typography>
+          <Button
+                  className={S.button}
+                  variant="contained"
+                  onClick={handleClose}
+              >
+                Accept
+              </Button>
         </Box>
       </Modal>
         <Box sx={{ bgcolor: "#f0f1ff", height: "123vh" }}>

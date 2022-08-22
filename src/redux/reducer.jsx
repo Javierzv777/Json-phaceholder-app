@@ -34,7 +34,7 @@ export const reducer = (state = initialState, {type, payload}) => {
             })
             return {
                 ...state,
-                posts: state.posts 
+                posts: [...state.posts] 
             }
         case DELETE_POST:
             return {

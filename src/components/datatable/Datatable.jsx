@@ -141,6 +141,13 @@ export default function DataGridDemo() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             the data of this post will be deleted permanently
           </Typography>
+          <Button
+                  className={S.button}
+                  variant="contained"
+                  onClick={handleClose}
+              >
+                Accept
+              </Button>
         </Box>
       </Modal>
       <div className={S.dataTable}>

@@ -56,6 +56,13 @@ export default function Edit() {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             The new information will overwrite the previous data
           </Typography>
+          <Button
+                  className={S.button}
+                  variant="contained"
+                  onClick={handleClose}
+              >
+                Accept
+              </Button>
         </Box>
       </Modal>
         <Box sx={{ bgcolor: "#f0f1ff", height: "121vh" }}>
