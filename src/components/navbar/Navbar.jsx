@@ -45,7 +45,7 @@ function Navbar() {
           </Typography>
             <div className={classes.navlinks}>
               <Link to="/" className={classes.link}>
-                Home
+                Datatable
               </Link>
               <Link to="/newpost" className={classes.link}>
                 New Post

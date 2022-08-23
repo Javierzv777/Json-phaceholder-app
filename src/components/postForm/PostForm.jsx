@@ -122,14 +122,15 @@ export default function NewPost() {
             }}
           >
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1 className={S.title}>New Post</h1>
-          
+              
+              <Typography className={S.title} variant="h4">
+                New Post
+            </Typography>
+            <br />
               <InputLabel>Title:</InputLabel>
               <TextField fullWidth label="title" id="fullWidth" 
                {...register("title", { required: true })}/>
-              <br />
-              <br />
-              <br />
+              <br /><br /><br />
               <InputLabel>Body:</InputLabel>
               <TextField
                 fullWidth
@@ -150,9 +151,7 @@ export default function NewPost() {
                 label="Age"
               >{new Array(10).fill(1).map((e, index) =>  <MenuItem value={index+1}>{index+1}</MenuItem>)}
               </Select>
-              <br />
-              <br />
-              
+              <br /><br />
               <Stack spacing={4} direction="row" justifyContent="center">
                 <Button variant="text"
                   onClick={()=>navigate("/")}

@@ -70,10 +70,10 @@ export default function DataGridDemo() {
     }
 
   const columns = [
-    { field: 'userId', headerName: 'UserId', width: 130 },
+    { field: 'userId', headerName: 'User Id', width: 130 },
     {
-      field: 'read',
-      headerName: 'Read',
+      field: 'look',
+      headerName: 'Look',
       sortable: false,
       renderCell: (params) => {
         const onClick = (e) => {
@@ -95,7 +95,7 @@ export default function DataGridDemo() {
         return <img className={S.logo} onClick={onClick} src={bookIcon}/>;
       },
     },
-    { field: 'id', headerName: 'postId', width: 70 },
+    { field: 'id', headerName: 'Post Id', width: 70 },
     { field: 'title', headerName: 'Title', width: 130 },
     { field: 'body', headerName: 'Body', width: 300 },
     {

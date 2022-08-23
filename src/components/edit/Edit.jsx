@@ -92,8 +92,7 @@ export default function Edit() {
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               The new information will overwrite the previous data
             </Typography>
-            <br />
-            <br />
+            <br /><br />
             <Stack spacing={4} direction="row" justifyContent="center">
               <Button
                 className={S.button}
@@ -120,15 +119,15 @@ export default function Edit() {
               margin: "auto",
             }}
           >
+              <Typography className={S.title} variant="h4">
+            Edit Post
+            </Typography>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1 className={S.title}>Edit Post</h1>
-
+            <br/>
               <InputLabel>Title:</InputLabel>
               <TextField defaultValue={post?.title} fullWidth label="title" id="fullWidth"
                 {...register("title", { required: true })} />
-              <br />
-              <br />
-              <br />
+              <br /><br /><br />
               <InputLabel>Body:</InputLabel>
               <TextField
                 defaultValue={post?.body}
@@ -139,10 +138,7 @@ export default function Edit() {
                 rows={8}
                 {...register("body", { required: true })}
               />
-              <br />
-              <br />
-              <br />
-              <br />
+              <br /><br /><br /><br />
               <Stack spacing={4} direction="row" justifyContent="center">
                 <Button variant="text"
                   onClick={() => navigate("/")}
