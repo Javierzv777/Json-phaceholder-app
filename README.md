@@ -30,17 +30,17 @@ modal
 <img src="https://i.ibb.co/sK7fxJt/Sin-t-tulo4.png" alt="modal" />
 
 
-<h2>marco de tabla</h2>
+<h2>marco de tabla</h2></br> </br>
 <img src=https://i.ibb.co/cTJBvqD/tabla.png" alt="aplicación" />
-<h2>acerca de la app</h2>
+<h2>acerca de la app</h2></br> </br>
 <img src="https://i.ibb.co/NYqLm8d/Sin-t-tulo3.png" alt= "about"/>
-<h2>editar</h2>
+<h2>editar</h2></br> </br>
 <img src="https://i.ibb.co/Wvt5FJY/edit-panel.png" alt="edit" />
-<h2>lista de comentarios</h2>
+<h2>lista de comentarios</h2></br> </br>
 <img src="https://i.ibb.co/M9w7HZw/comments.png" alt="comments" />
-<h2>modal </h2>
+<h2>modal </h2></br> </br>
 <img src="https://i.ibb.co/M9Ht6V8/model.png" alt="modal" />
-<h2>modal 2</h2>
+<h2>modal 2</h2></br> </br>
 <img src="https://i.ibb.co/8s2nFgn/otromodel.png" alt="modal" />
 
 
@@ -65,14 +65,15 @@ You will also see any errors in the console.
 
 
 <h2>table frame</h2>
+</br> </br>
 <img src=https://i.ibb.co/cTJBvqD/tabla.png" alt="aplicación" />
-<h2>about frame</h2>
+<h2>about frame</h2></br> </br>
 <img src="https://i.ibb.co/NYqLm8d/Sin-t-tulo3.png" alt= "about"/>
-<h2>edit frame</h2>
+<h2>edit frame</h2></br> </br>
 <img src="https://i.ibb.co/Wvt5FJY/edit-panel.png" alt="edit" />
-<h2>comments frame</h2>
+<h2>comments frame</h2></br> </br>
 <img src="https://i.ibb.co/M9w7HZw/comments.png" alt="comments" />
-<h2>modal frame</h2>
+<h2>modal frame</h2></br> </br>
 <img src="https://i.ibb.co/M9Ht6V8/model.png" alt="modal" />
-<h2>modal 2</h2>
+<h2>modal 2</h2></br> </br>
 <img src="https://i.ibb.co/8s2nFgn/otromodel.png" alt="modal" />
