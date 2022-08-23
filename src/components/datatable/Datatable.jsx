@@ -70,7 +70,7 @@ export default function DataGridDemo() {
     }
 
   const columns = [
-    { field: 'userId', headerName: 'User Id', width: 130 },
+    { field: 'userId', headerName: 'User Id', width: 80 },
     {
       field: 'look',
       headerName: 'Look',
@@ -95,7 +95,7 @@ export default function DataGridDemo() {
         return <img className={S.logo} onClick={onClick} src={bookIcon}/>;
       },
     },
-    { field: 'id', headerName: 'Post Id', width: 70 },
+    { field: 'id', headerName: 'Post Id', width: 80 },
     { field: 'title', headerName: 'Title', width: 130 },
     { field: 'body', headerName: 'Body', width: 300 },
     {
@@ -189,7 +189,7 @@ export default function DataGridDemo() {
         </Box>
       </Modal>
         <div className={S.dataTable}>
-        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection />
+        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection = {false} />
         {openDialog && (<div>
           <Dialog
           open={openDialog}
