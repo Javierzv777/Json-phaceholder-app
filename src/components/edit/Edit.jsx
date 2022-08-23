@@ -74,7 +74,7 @@ export default function Edit() {
           onClose={handleCloseDialog}
           aria-describedby="alert-dialog-slide-description"
         >
-          <DialogTitle>{"Success operation"}</DialogTitle>
+          <DialogTitle>{"Successful Update"}</DialogTitle>
           <DialogActions>
             <Button onClick={handleCloseDialog}>Close</Button>
           </DialogActions>

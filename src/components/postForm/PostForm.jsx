@@ -74,7 +74,7 @@ export default function NewPost() {
         onClose={handleCloseDialog}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Success operation"}</DialogTitle>
+        <DialogTitle>{"Post Successfully Created"}</DialogTitle>
         <DialogActions>
           <Button onClick={handleCloseDialog}>Close</Button>
         </DialogActions>
@@ -140,8 +140,7 @@ export default function NewPost() {
                 rows={8}
                 {...register("body", { required: true })}
               />
-              <br />
-              <br />
+              <br /><br />
               <InputLabel id="demo-simple-select-label">UserId</InputLabel>
               <Select
                 fullWidth
