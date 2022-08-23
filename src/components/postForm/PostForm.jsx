@@ -122,7 +122,7 @@ export default function NewPost() {
             }}
           >
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1>New Post</h1>
+              <h1 className={S.title}>New Post</h1>
           
               <InputLabel>Title:</InputLabel>
               <TextField fullWidth label="title" id="fullWidth" 

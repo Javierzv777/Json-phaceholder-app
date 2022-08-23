@@ -171,19 +171,19 @@ export default function DataGridDemo() {
           <br />
           <br />
         <Stack spacing={4} direction="row" justifyContent="center">
-          <Button
-                  className={S.button}
-                  variant="contained"
-                  onClick={handleClose}
-              >
-                Accept
-              </Button>
               <Button
                   className={S.button}
                   variant="contained"
                   onClick={handleCancel}
               >
                 Cancel
+              </Button>
+              <Button
+                  className={S.button}
+                  variant="contained"
+                  onClick={handleClose}
+              >
+                Accept
               </Button>
  </Stack>
         </Box>

@@ -16,8 +16,6 @@ import Typography from '@mui/material/Typography';
 import style from '../styleModal';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 
@@ -100,16 +98,16 @@ export default function Edit() {
               <Button
                 className={S.button}
                 variant="contained"
-                onClick={handleClose}
+                onClick={handleCancel}
               >
-                Accept
+                Cancel
               </Button>
               <Button
                 className={S.button}
                 variant="contained"
-                onClick={handleCancel}
+                onClick={handleClose}
               >
-                Cancel
+                Accept
               </Button>
             </Stack>
           </Box>
@@ -123,7 +121,7 @@ export default function Edit() {
             }}
           >
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1>Edit Post</h1>
+              <h1 className={S.title}>Edit Post</h1>
 
               <InputLabel>Title:</InputLabel>
               <TextField defaultValue={post?.title} fullWidth label="title" id="fullWidth"

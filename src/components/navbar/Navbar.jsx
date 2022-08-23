@@ -1,5 +1,5 @@
 import React from "react";
-
+import S from "./navbar.module.css"
 import {
   AppBar,
   Toolbar,
@@ -35,27 +35,31 @@ function Navbar() {
 
 
   return (
+    
     <AppBar position="static">
       <CssBaseline />
-      <Toolbar>
-        <Typography variant="h4" className={classes.logo}>
-          Json queries
-        </Typography>
-          <div className={classes.navlinks}>
-            <Link to="/" className={classes.link}>
-              Home
-            </Link>
-            <Link to="/newpost" className={classes.link}>
-              New Post
-            </Link>
-            <Link to="/about" className={classes.link}>
-              About
-            </Link>
-            <Link to="/faq" className={classes.link}>
-              
-            </Link>
-          </div>
-      </Toolbar>
+      <div className={S.navbar}>
+        <Toolbar>
+          <Typography variant="h4" className={classes.logo}>
+            JsonPlaceHolder
+          </Typography>
+            <div className={classes.navlinks}>
+              <Link to="/" className={classes.link}>
+                Home
+              </Link>
+              <Link to="/newpost" className={classes.link}>
+                New Post
+              </Link>
+              <Link to="/about" className={classes.link}>
+                About
+              </Link>
+              <Link to="/faq" className={classes.link}>
+                
+              </Link>
+            </div>
+        </Toolbar>
+
+      </div>
     </AppBar>
   );
 }

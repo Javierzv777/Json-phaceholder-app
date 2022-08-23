@@ -2,6 +2,9 @@
     margin-bottom: 10vh ;
    
 }
+.title{
+    color: red !important;
+}
 .container{
     color: #faf1f9;
     min-height: max-content;

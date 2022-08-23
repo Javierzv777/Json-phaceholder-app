@@ -6,3 +6,8 @@
     margin: 0 5rem;
     text-align: center;
 }
+.typographyTextTittle{
+    margin: 3rem 8vh !important;
+    text-align: center !important;
+    color: red !important;
+}
