@@ -5,7 +5,7 @@ const initialState = {
     posts: [],
     users : [],
     comments : [],
-    post:{},
+    post:null,
     register: null
 }
 
@@ -42,6 +42,12 @@ export const reducer = (state = initialState, {type, payload}) => {
             return {
                 ...state,
                 posts: [...state.posts.filter(post => post.id !== payload)]
+            }
+        case "CLEAN_POST":
+            return {
+                ...state,
+                post:null,
+                comments:[]
             }
         case NEW_POST:
                 return {
