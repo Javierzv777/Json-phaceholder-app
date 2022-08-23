@@ -16,15 +16,41 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import style from '../styleModal'
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
 
 export default function NewPost() {
   const [data, setData] = React.useState(null);
   const [open, setOpen] = React.useState(false);
+  const [openDialog, setOpenDialog] = React.useState(false);
+
+  const Transition = React.forwardRef(function Transition(
+  props,
+  ref
+  ) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
 
   const handleClose = () =>{
-    navigate("/");
+    
     dispatch(newPost(data));
-    setOpen(false)};
+    setOpen(false)
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+    navigate("/");
+  };
+
+  const handleCancel = ()=>{
+    setOpen(false);
+  }
+
   const navigate = useNavigate()
   const dispatch = useDispatch();
   const {
@@ -41,6 +67,18 @@ export default function NewPost() {
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
+      <Dialog
+        open={openDialog}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleCloseDialog}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{"Success operation"}</DialogTitle>
+        <DialogActions>
+          <Button onClick={handleCloseDialog}>Close</Button>
+        </DialogActions>
+      </Dialog>
       <Modal
         open={open}
         onClose={handleClose}
@@ -56,6 +94,14 @@ export default function NewPost() {
           </Typography>
           <br />
           <br />
+  <Stack spacing={4} direction="row" justifyContent="center">
+  <Button
+                  className={S.button}
+                  variant="contained"
+                  onClick={handleCancel}
+              >
+                Cancel
+              </Button>
           <Button
                   className={S.button}
                   variant="contained"
@@ -63,6 +109,8 @@ export default function NewPost() {
               >
                 Accept
               </Button>
+
+               </Stack>
         </Box>
       </Modal>
         <Box sx={{ bgcolor: "#f0f1ff", height: "123vh" }}>
@@ -114,7 +162,7 @@ export default function NewPost() {
                   variant="contained"
                   type="submit"
                 >
-                  UPDATE
+                  CREATE
                 </Button>
               </Stack>
             </form>

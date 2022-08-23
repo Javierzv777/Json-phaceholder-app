@@ -45,11 +45,11 @@ function Navbar() {
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/about" className={classes.link}>
-              About
-            </Link>
             <Link to="/newpost" className={classes.link}>
               New Post
+            </Link>
+            <Link to="/about" className={classes.link}>
+              About
             </Link>
             <Link to="/faq" className={classes.link}>
               

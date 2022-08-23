@@ -5,7 +5,8 @@ const initialState = {
     posts: [],
     users : [],
     comments : [],
-    post:{}
+    post:{},
+    register: null
 }
 
 export const reducer = (state = initialState, {type, payload}) => {
@@ -13,7 +14,8 @@ export const reducer = (state = initialState, {type, payload}) => {
         case GET_POSTS:
             return {
                 ...state, 
-                posts:[...payload]
+                posts:[...payload],
+                register: payload.length
             }
         case GET_COMMENTS:
             return {
@@ -44,7 +46,8 @@ export const reducer = (state = initialState, {type, payload}) => {
         case NEW_POST:
                 return {
                     ...state,
-                    posts: [...state.posts, {...payload, id: state.posts.length+1}]
+                    posts: [...state.posts, {...payload, id: state.register+1}],
+                    register: state.register+1
                 }
         default: return state;
     }

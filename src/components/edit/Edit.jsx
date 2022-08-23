@@ -13,60 +13,107 @@ import { editPost } from "../../redux/actions";
 import { useNavigate } from "react-router-dom";
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
-import style from '../styleModal'
+import style from '../styleModal';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
 
 export default function Edit() {
-  const [data, setdata] = React.useState(null)
+  const [data, setdata] = React.useState(null);
   const [open, setOpen] = React.useState(false);
-  
-  const handleClose = () =>{
+  const [openDialog, setOpenDialog] = React.useState(false);
+
+  const Transition = React.forwardRef(function Transition(
+    props,
+    ref
+  ) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
+
+  const handleClose = () => {
+    setOpen(false);
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    dispatch(editPost({ ...data, id: post.id, userId: post.userId }));
+    setOpenDialog(false);
     navigate("/");
-    dispatch(editPost({...data, id: post.id, userId: post.userId}));
-    setOpen(false)};
+  };
+
+
+  const handleCancel = () => {
+    setOpen(false);
+  }
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const post = useSelector(state => state.post);
-  const onSubmit = (data) =>{
+  const onSubmit = (data) => {
     setdata(data);
-    setOpen(true);};
-   
+    setOpen(true);
+  };
+
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  
-  
+
+
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            there will be an update of this post
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            The new information will overwrite the previous data
-          </Typography>
-          <br />
-          <br />
-          <Button
-                  className={S.button}
-                  variant="contained"
-                  onClick={handleClose}
+        <Dialog
+          open={openDialog}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleCloseDialog}
+          aria-describedby="alert-dialog-slide-description"
+        >
+          <DialogTitle>{"Success operation"}</DialogTitle>
+          <DialogActions>
+            <Button onClick={handleCloseDialog}>Close</Button>
+          </DialogActions>
+        </Dialog>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              there will be an update of this post
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              The new information will overwrite the previous data
+            </Typography>
+            <br />
+            <br />
+            <Stack spacing={4} direction="row" justifyContent="center">
+              <Button
+                className={S.button}
+                variant="contained"
+                onClick={handleClose}
               >
                 Accept
               </Button>
-        </Box>
-      </Modal>
+              <Button
+                className={S.button}
+                variant="contained"
+                onClick={handleCancel}
+              >
+                Cancel
+              </Button>
+            </Stack>
+          </Box>
+        </Modal>
         <Box sx={{ bgcolor: "#f0f1ff", height: "121vh" }}>
           <Box
             sx={{
@@ -77,10 +124,10 @@ export default function Edit() {
           >
             <form onSubmit={handleSubmit(onSubmit)}>
               <h1>Edit Post</h1>
-             
+
               <InputLabel>Title:</InputLabel>
-              <TextField defaultValue={post?.title} fullWidth label="title" id="fullWidth" 
-               {...register("title", { required: true })}/>
+              <TextField defaultValue={post?.title} fullWidth label="title" id="fullWidth"
+                {...register("title", { required: true })} />
               <br />
               <br />
               <br />
@@ -100,7 +147,7 @@ export default function Edit() {
               <br />
               <Stack spacing={4} direction="row" justifyContent="center">
                 <Button variant="text"
-                  onClick={()=>navigate("/")}
+                  onClick={() => navigate("/")}
                 >CANCEL</Button>
                 <Button
                   className={S.button}
