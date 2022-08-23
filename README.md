@@ -31,8 +31,7 @@ También verá cualquier error en la consola.
 <img src="https://i.ibb.co/M9w7HZw/comments.png" alt="comments" />
 <h2>modal </h2></br> </br>
 <img src="https://i.ibb.co/M9Ht6V8/model.png" alt="modal" />
-<h2>modal 2</h2></br> </br>
-<img src="https://i.ibb.co/8s2nFgn/otromodel.png" alt="modal" />
+
 
 
 <h2>JSON placeholder app</h2>
@@ -66,5 +65,4 @@ You will also see any errors in the console.
 <img src="https://i.ibb.co/M9w7HZw/comments.png" alt="comments" />
 <h2>modal frame</h2></br> </br>
 <img src="https://i.ibb.co/M9Ht6V8/model.png" alt="modal" />
-<h2>modal 2</h2></br> </br>
-<img src="https://i.ibb.co/8s2nFgn/otromodel.png" alt="modal" />
+
