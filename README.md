@@ -32,8 +32,6 @@ el registro de las publicaciones se mantiene alojado en el store de redux, permi
 
 <h2>marco de tabla</h2></br> </br>
 <img src=https://i.ibb.co/cTJBvqD/tabla.png" alt="aplicación" />
-<h2>acerca de la app</h2></br> </br>
-<img src="https://i.ibb.co/NYqLm8d/Sin-t-tulo3.png" alt= "about"/>
 <h2>editar</h2></br> </br>
 <img src="https://i.ibb.co/Wvt5FJY/edit-panel.png" alt="edit" />
 <h2>lista de comentarios</h2></br> </br>
