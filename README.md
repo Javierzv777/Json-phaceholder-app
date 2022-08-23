@@ -30,6 +30,20 @@ modal
 <img src="https://i.ibb.co/sK7fxJt/Sin-t-tulo4.png" alt="modal" />
 
 
+<h2>marco de tabla</h2>
+<img src=https://i.ibb.co/cTJBvqD/tabla.png" alt="aplicación" />
+<h2>acerca de la app</h2>
+<img src="https://i.ibb.co/NYqLm8d/Sin-t-tulo3.png" alt= "about"/>
+<h2>editar</h2>
+<img src="https://i.ibb.co/Wvt5FJY/edit-panel.png" alt="edit" />
+<h2>lista de comentarios</h2>
+<img src="https://i.ibb.co/M9w7HZw/comments.png" alt="comments" />
+<h2>modal </h2>
+<img src="https://i.ibb.co/M9Ht6V8/model.png" alt="modal" />
+<h2>modal 2</h2>
+<img src="https://i.ibb.co/8s2nFgn/otromodel.png" alt="modal" />
+
+
 <h2>JSON placeholder app</h2>
 
 This application consumes the api https://jsonplaceholder.typicode.com/ bringing all the publications to the main page, it also shows the comments of each post by clicking on the icon of the second column, where the book is in each row that is displayed. you want to consult.
@@ -50,13 +64,15 @@ The page will reload if you make changes.
 You will also see any errors in the console.
 
 
-table frame
-<img src="https://i.ibb.co/0YSCG3C/Captura-desde-2022-07-31-20-23-21.png" alt="aplicación" />
-about frame
+<h2>table frame</h2>
+<img src=https://i.ibb.co/cTJBvqD/tabla.png" alt="aplicación" />
+<h2>about frame</h2>
 <img src="https://i.ibb.co/NYqLm8d/Sin-t-tulo3.png" alt= "about"/>
-edit frame
-<img src="https://i.ibb.co/p234zGq/Sin-t-tulo2.png" alt="edit" />
-comments frame
-<img src="https://i.ibb.co/ncTkC97/Sin-t-tulo.png" alt="comments" />
-modal frame
-<img src="https://i.ibb.co/sK7fxJt/Sin-t-tulo4.png" alt="modal" />
+<h2>edit frame</h2>
+<img src="https://i.ibb.co/Wvt5FJY/edit-panel.png" alt="edit" />
+<h2>comments frame</h2>
+<img src="https://i.ibb.co/M9w7HZw/comments.png" alt="comments" />
+<h2>modal frame</h2>
+<img src="https://i.ibb.co/M9Ht6V8/model.png" alt="modal" />
+<h2>modal 2</h2>
+<img src="https://i.ibb.co/8s2nFgn/otromodel.png" alt="modal" />
